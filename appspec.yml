@@ -3,9 +3,9 @@ os: linux
 
 
 
-#files:
-#  - source: /
- #   destination: "/home/ec2-user/${DESTINATION_PATH}"
+files:
+  - source: /
+    destination: "/home/ec2-user/demo"
 
 permissions:
   - object: /
