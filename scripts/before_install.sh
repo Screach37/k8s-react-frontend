@@ -1,7 +1,11 @@
 #!/bin/bash
 
+# Debugging statements
+echo "Current working directory: $(pwd)"
+echo "Is ${DESTINATION_PATH} directory present? $(ls -ld ${DESTINATION_PATH})"
+
 #_Change_Working_Directory
-mkdir -p "${DOCUMENT_ROOT}"
+mkdir "${DOCUMENT_ROOT}"
 cd "${DOCUMENT_ROOT}"
 
 #_Update_&_Set_Node_Version
