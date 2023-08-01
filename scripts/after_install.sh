@@ -14,5 +14,5 @@ rm -rf build
 # Install node modules and make React build
 npm install
 npm run build
-cp -rf "${DESTINATION_PATH}/build/*" "${DOCUMENT_ROOT}"
+cp -rf "${DESTINATION_PATH}/build/"* "${DOCUMENT_ROOT}"
 
