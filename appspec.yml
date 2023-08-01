@@ -3,16 +3,13 @@ os: linux
 
 # Define your environment variables here
 env:
-
-  DESTINATION_PATH: "demo"
+  DESTINATION_PATH: "/home/ec2-user/demo"
   DOCUMENT_ROOT: "/demo"
-  SERVICE_NAME:	"demo-lms-frontend"
-
+  SERVICE_NAME: "demo-lms-frontend"
 
 files:
   - source: /
-    destination: "/home/ec2-user/""{{ DESTINATION_PATH }""
-
+    destination: "${DESTINATION_PATH}"
 
 permissions:
   - object: /
@@ -21,18 +18,18 @@ permissions:
     group: ec2-user
 
 hooks:
-
   BeforeInstall:
     - location: scripts/before_install.sh
       timeout: 500
       runas: root
-  
-   AfterInstall:
-     - location: scripts/after_install.sh
-       timeout: 500
-       runas: root
 
-   ApplicationStart:
-     - location: scripts/app_start.sh
-       timeout: 500
-       runas: root
+  AfterInstall:
+    - location: scripts/after_install.sh
+      timeout: 500
+      runas: root
+
+  ApplicationStart:
+    - location: scripts/app_start.sh
+      timeout: 500
+      runas: root
+

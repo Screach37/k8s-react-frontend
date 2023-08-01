@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #_Change_Working_Directory
-mkdir  "${DOCUMENT_ROOT}"
+mkdir -p "${DOCUMENT_ROOT}"
 cd "${DOCUMENT_ROOT}"
 
 #_Update_&_Set_Node_Version
