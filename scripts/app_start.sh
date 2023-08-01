@@ -5,7 +5,7 @@ DESTINATION_PATH=$(aws ssm get-parameter --name "/MyApp/DESTINATION_PATH" --quer
 SERVICE_NAME=$(aws ssm get-parameter --name "/MyApp/SERVICE_NAME" --query "Parameter.Value" --output text)
 
 # Use the retrieved variables as needed in your script
-cd "/home/ec2-user/${DESTINATION_PATH}"
+cd "${DESTINATION_PATH}"
 
 # Delete old PM2 service and start the application
 sudo pm2 delete "${SERVICE_NAME}"
