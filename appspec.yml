@@ -11,7 +11,7 @@ variables:
 
 files:
   - source: /
-    destination: '${DESTINATION_PATH}'
+    destination: "${DESTINATION_PATH}"
 
 
 permissions:
