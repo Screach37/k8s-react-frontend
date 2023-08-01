@@ -1,15 +1,15 @@
 version: 0.0
 os: linux
 
-# Define your environment variables here
+# Define your environment variables here (no need to specify values here)
 env:
-  DESTINATION_PATH: "/home/ec2-user/demo"
-  DOCUMENT_ROOT: "/demo"
-  SERVICE_NAME: "demo-lms-frontend"
+  DESTINATION_PATH: "/MyApp/DESTINATION_PATH"
+  DOCUMENT_ROOT: "/MyApp/DOCUMENT_ROOT"
+  SERVICE_NAME: "MyApp/SERVICE_NAME"
 
 files:
   - source: /
-    destination: "${DESTINATION_PATH}"
+    destination: "/home/ec2-user/${DESTINATION_PATH}"
 
 permissions:
   - object: /
