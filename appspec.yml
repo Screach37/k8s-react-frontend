@@ -10,7 +10,7 @@ variables:
 
 
 files:
-  - source: build/
+  - source: /
     destination: /home/ec2-user/demo
 
 
