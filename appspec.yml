@@ -11,7 +11,7 @@ env:
 
 files:
   - source: /
-    destination: /home/ec2-user/${DESTINATION_PATH}
+    destination: "/home/ec2-user/${DESTINATION_PATH}"
 
 
 permissions:
