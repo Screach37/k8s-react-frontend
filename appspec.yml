@@ -10,8 +10,8 @@ variables:
 
 
 files:
-  - source: /
-    destination: /home/ec2-user/
+  - source: build/
+    destination: /home/ec2-user/demo
 
 
 permissions:
