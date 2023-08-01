@@ -5,7 +5,7 @@ DESTINATION_PATH=$(aws ssm get-parameter --name "/MyApp/DESTINATION_PATH" --quer
 DOCUMENT_ROOT=$(aws ssm get-parameter --name "/MyApp/DOCUMENT_ROOT" --query "Parameter.Value" --output text)
 SERVICE_NAME=$(aws ssm get-parameter --name "/MyApp/SERVICE_NAME" --query "Parameter.Value" --output text)
 
-mkdir -p "${DESTINATION_PATH}"
+#mkdir -p "${DESTINATION_PATH}"
 
 
 # Use the retrieved variables as needed in your script
