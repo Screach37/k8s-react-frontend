@@ -5,7 +5,7 @@ DESTINATION_PATH=$(aws ssm get-parameter --name "/MyApp/DESTINATION_PATH" --quer
 DOCUMENT_ROOT=$(aws ssm get-parameter --name "/MyApp/DOCUMENT_ROOT" --query "Parameter.Value" --output text)
 
 # Use the retrieved variables as needed in your script
-cd "/home/ec2-user/${DESTINATION_PATH}"
+cd "${DESTINATION_PATH}"
 
 # Remove unused code
 rm -rf node_modules
