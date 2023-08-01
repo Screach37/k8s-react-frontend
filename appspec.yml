@@ -1,15 +1,11 @@
 version: 0.0
 os: linux
 
-# Define your environment variables here (no need to specify values here)
-env:
-  DESTINATION_PATH: "/MyApp/DESTINATION_PATH"
-  DOCUMENT_ROOT: "/MyApp/DOCUMENT_ROOT"
-  SERVICE_NAME: "MyApp/SERVICE_NAME"
 
-files:
-  - source: /
-    destination: "/home/ec2-user/${DESTINATION_PATH}"
+
+#files:
+#  - source: /
+ #   destination: "/home/ec2-user/${DESTINATION_PATH}"
 
 permissions:
   - object: /
