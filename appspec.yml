@@ -4,14 +4,14 @@ os: linux
 # Define your environment variables here
 variables:
 
-  DESTINATION_PATH: "/home/ec2-user/demo"
+  DESTINATION_PATH: "demo"
   DOCUMENT_ROOT: "/demo"
   SERVICE_NAME:	"demo-lms-frontend"
 
 
 files:
   - source: /
-    destination: ${DESTINATION_PATH}
+    destination: /home/ec2-user/${DESTINATION_PATH}
 
 
 permissions:
