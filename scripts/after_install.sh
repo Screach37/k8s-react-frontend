@@ -3,6 +3,11 @@
 #_Change_Working_Directory
 cd '${DESTINATION_PATH}'
 
+# Debugging statements
+echo "Current working directory: $(pwd)"
+echo "Is /home/ec2-user/demo directory present? $(ls -ld /home/ec2-user/demo)"
+
+
 #_Remove_Unused_Code
 rm -rf node_modules
 rm -rf build
