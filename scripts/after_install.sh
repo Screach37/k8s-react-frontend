@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./config.sh
+source config.sh
 
 # Use the retrieved variables as needed in your script
 cd "${DESTINATION_PATH}"
