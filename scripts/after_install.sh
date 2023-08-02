@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Retrieve the values from AWS Systems Manager Parameter Store
-DESTINATION_PATH=$(aws ssm get-parameter --name "/MyApp/DESTINATION_PATH" --query "Parameter.Value" --output text)
-DOCUMENT_ROOT=$(aws ssm get-parameter --name "/MyApp/DOCUMENT_ROOT" --query "Parameter.Value" --output text)
+# Define your variables here
+DESTINATION_PATH="/home/ec2-user/demo"
+DOCUMENT_ROOT="/demo"
 
 # Use the retrieved variables as needed in your script
 cd "${DESTINATION_PATH}"

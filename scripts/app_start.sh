@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# Retrieve the values from AWS Systems Manager Parameter Store
-DESTINATION_PATH=$(aws ssm get-parameter --name "/MyApp/DESTINATION_PATH" --query "Parameter.Value" --output text)
-SERVICE_NAME=$(aws ssm get-parameter --name "/MyApp/SERVICE_NAME" --query "Parameter.Value" --output text)
+# Define your environment variables here
+DESTINATION_PATH="/home/ec2-user/demo"
+SERVICE_NAME="demo-lms-frontend"
 
-# Use the retrieved variables as needed in your script
+# Use the defined variables as needed in your script
 cd "${DESTINATION_PATH}"
 
 # Delete old PM2 service and start the application
