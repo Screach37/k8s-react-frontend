@@ -5,7 +5,7 @@
 #DOCUMENT_ROOT=$(aws ssm get-parameter --name "/MyApp/DOCUMENT_ROOT" --query "Parameter.Value" --output text)
 #SERVICE_NAME=$(aws ssm get-parameter --name "/MyApp/SERVICE_NAME" --query "Parameter.Value" --output text)
 
-source ./config.sh
+#source ./config.sh
 
 
 # Use the retrieved variables as needed in your script

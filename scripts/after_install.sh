@@ -4,7 +4,7 @@
 #DESTINATION_PATH=$(aws ssm get-parameter --name "/MyApp/DESTINATION_PATH" --query "Parameter.Value" --output text)
 #DOCUMENT_ROOT=$(aws ssm get-parameter --name "/MyApp/DOCUMENT_ROOT" --query "Parameter.Value" --output text)
 
-source ./config.sh
+#source ./config.sh
 
 
 # Use the retrieved variables as needed in your script

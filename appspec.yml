@@ -1,6 +1,12 @@
 version: 0.0
 os: linux
 
+environment:
+  variables:
+    DESTINATION_PATH: "/home/ec2-user/demo"
+    DOCUMENT_ROOT: "/demo"
+    SERVICE_NAME: "demo-lms-frontend"
+
 files:
   - source: /
     destination: "/home/ec2-user/demo"
