@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source scripts/config.sh
+#source scripts/config.sh
 
 
 # Use the defined variables as needed in your script

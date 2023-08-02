@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source scripts/config.sh
+#source scripts/config.sh
 
 
 # Create destination directory if not present
