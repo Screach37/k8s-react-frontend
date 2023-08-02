@@ -20,7 +20,7 @@ permissions:
 
 hooks:
   BeforeInstall:
-    - location: scripts/before_install.sh
+    - location: scripts/config.sh
       timeout: 500
       runas: root
 
