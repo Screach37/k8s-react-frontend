@@ -1,8 +1,7 @@
 #!/bin/bash
 
-# Define your environment variables here
-DESTINATION_PATH="/home/ec2-user/demo"
-SERVICE_NAME="demo-lms-frontend"
+source ./config.sh
+
 
 # Use the defined variables as needed in your script
 cd "${DESTINATION_PATH}"

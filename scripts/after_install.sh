@@ -1,8 +1,6 @@
 #!/bin/bash
 
-# Define your variables here
-DESTINATION_PATH="/home/ec2-user/demo"
-DOCUMENT_ROOT="/demo"
+source ./config.sh
 
 # Use the retrieved variables as needed in your script
 cd "${DESTINATION_PATH}"

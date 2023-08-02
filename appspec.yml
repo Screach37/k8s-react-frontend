@@ -1,7 +1,4 @@
 
-# Retrieve the values from AWS Systems Manager Parameter Store
-#DESTINATION_PATH=$(aws ssm get-parameter --name "/MyApp/DESTINATION_PATH" --query "Parameter.Value" --output text)
-
 version: 0.0
 os: linux
 files:

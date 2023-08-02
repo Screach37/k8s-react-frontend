@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# Define your variables here
-DESTINATION_PATH="/home/ec2-user/demo"
-DOCUMENT_ROOT="/demo"
-SERVICE_NAME="demo-lms-frontend"
+source ./config.sh
+
 
 # Create destination directory if not present
 mkdir -p "${DESTINATION_PATH}"
