@@ -4,7 +4,7 @@
 
 
 # Create destination directory if not present
-mkdir -p "${DESTINATION_PATH}"
+#mkdir -p "${DESTINATION_PATH}"
 
 # Use the retrieved variables as needed in your script
 mkdir -p "${DOCUMENT_ROOT}"
