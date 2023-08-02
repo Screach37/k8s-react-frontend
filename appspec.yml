@@ -1,12 +1,5 @@
-
 version: 0.0
 os: linux
-
-
-variables:
-    DESTINATION_PATH: "/home/ec2-user/demo"
-    DOCUMENT_ROOT: "/demo"
-    SERVICE_NAME: "demo-lms-frontend"
 
 files:
   - source: /

@@ -1,8 +1,10 @@
 #!/bin/bash
 
 # Retrieve the values from AWS Systems Manager Parameter Store
-DESTINATION_PATH=$(aws ssm get-parameter --name "/MyApp/DESTINATION_PATH" --query "Parameter.Value" --output text)
-SERVICE_NAME=$(aws ssm get-parameter --name "/MyApp/SERVICE_NAME" --query "Parameter.Value" --output text)
+#DESTINATION_PATH=$(aws ssm get-parameter --name "/MyApp/DESTINATION_PATH" --query "Parameter.Value" --output text)
+#SERVICE_NAME=$(aws ssm get-parameter --name "/MyApp/SERVICE_NAME" --query "Parameter.Value" --output text)
+
+source ./config.sh
 
 # Use the retrieved variables as needed in your script
 cd "${DESTINATION_PATH}"
