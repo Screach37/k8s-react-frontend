@@ -1,14 +1,12 @@
 #!/bin/bash
 
-#source scripts/config.sh
-# Retrieve the values from AWS Systems Manager Parameter Store or pass them as arguments
+# Retrieve the values from AWS Systems Manager Parameter Store
+DESTINATION_PATH=$(aws ssm get-parameter --name "/MyApp/DESTINATION_PATH" --query "Parameter.Value" --output text)
+DOCUMENT_ROOT=$(aws ssm get-parameter --name "/MyApp/DOCUMENT_ROOT" --query "Parameter.Value" --output text)
+SERVICE_NAME=$(aws ssm get-parameter --name "/MyApp/SERVICE_NAME" --query "Parameter.Value" --output text)
 
-DESTINATION_PATH="$1"
-DOCUMENT_ROOT="$2"
-SERVICE_NAME="$3"
-
-# Create destination directory if not present
 #mkdir -p "${DESTINATION_PATH}"
+
 
 # Use the retrieved variables as needed in your script
 mkdir -p "${DOCUMENT_ROOT}"
