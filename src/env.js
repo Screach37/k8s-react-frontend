@@ -1,1 +1,3 @@
-export const API_URL = "https://lmsapiarise.intellix360.in";
+const backendURL = "http://backend-service:2000";
+console.log(backendURL);
+module.exports = { backendURL };

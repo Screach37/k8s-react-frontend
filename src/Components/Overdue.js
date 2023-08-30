@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Fees } from "./SvgIcon";
 import { AiTwotoneCalendar } from "react-icons/ai";
 import { NavLink } from 'react-router-dom';
-import { API_URL } from '../env';
+import { backendURL } from '../env';
 
 export default function Overdue() {
 
@@ -19,7 +19,7 @@ export default function Overdue() {
         redirect: 'follow'
       };
 
-      fetch(`${API_URL}/get/overdue/payments`, requestOptions)
+      fetch(`${backendURL}/get/overdue/payments`, requestOptions)
         .then(response => response.json())
         .then(result => {console.log(result);
         

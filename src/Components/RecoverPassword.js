@@ -6,7 +6,7 @@ import { AiFillEye } from 'react-icons/ai';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
-import { API_URL } from '../env';
+import { backendURL } from '../env';
 
 export default function RecoverPassword() {
 
@@ -56,7 +56,7 @@ const passwordMatch = () =>{
       redirect: 'follow'
     };
 
-    fetch(`${API_URL}/forgetpass3`, requestOptions)
+    fetch(`${backendURL}/forgetpass3`, requestOptions)
       .then(response => response.json())
       .then(result => {
         console.log(result)

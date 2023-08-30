@@ -7,7 +7,7 @@ import { MdOutlineAssignment } from 'react-icons/md';
 import { MdOutlineMenuBook } from 'react-icons/md';
 import { GiTrophyCup } from 'react-icons/gi';
 import { NavLink, useLocation } from 'react-router-dom';
-import { API_URL } from '../env';
+import { backendURL } from '../env';
 
 export default function UpcomingAssignment() {
 
@@ -24,7 +24,7 @@ export default function UpcomingAssignment() {
           redirect: 'follow'
         };
 
-        fetch(`${API_URL}/get/upcom/assignments`, requestOptions)
+        fetch(`${backendURL}/get/upcom/assignments`, requestOptions)
           .then(response => response.json())
           .then(result => {
             if(result.status == "1"){

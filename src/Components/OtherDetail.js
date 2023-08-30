@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
-import { API_URL } from '../env';
+import { backendURL } from '../env';
 
 
 export default function OtherDetail() {
@@ -19,7 +19,7 @@ export default function OtherDetail() {
       redirect: 'follow'
     };
     
-    fetch(`${API_URL}/get/studentdetail`, requestOptions)
+    fetch(`${backendURL}/get/studentdetail`, requestOptions)
       .then(response => response.json())
       .then(result => {
        // console.log(result);

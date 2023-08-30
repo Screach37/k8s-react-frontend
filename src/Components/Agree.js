@@ -3,7 +3,7 @@ import { GiDuration } from 'react-icons/gi'
 import { NavLink, useNavigate, useParams } from 'react-router-dom';
 import { ImArrowLeft2 } from 'react-icons/im';
 import { MdOutlineQuiz } from 'react-icons/md';
-import { API_URL } from '../env';
+import { backendURL } from '../env';
 
 export default function Agree() {
 
@@ -41,7 +41,7 @@ export default function Agree() {
           redirect: 'follow'
         };
 
-        fetch(`${API_URL}/view/upcoming/quiz`, requestOptions)
+        fetch(`${backendURL}/view/upcoming/quiz`, requestOptions)
           .then(response => response.json())
           .then(result => {
             if(result.status == "1"){

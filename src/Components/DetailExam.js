@@ -3,7 +3,7 @@ import { ImArrowLeft2 } from 'react-icons/im';
 import { AiTwotoneCalendar } from 'react-icons/ai';
 import { CiClock2 } from 'react-icons/ci';
 import { NavLink, useNavigate, useParams } from 'react-router-dom';
-import { API_URL } from '../env';
+import { backendURL } from '../env';
 
 export default function DetailExam() {
 
@@ -38,7 +38,7 @@ export default function DetailExam() {
             redirect: 'follow'
           };
 
-          fetch(`${API_URL}/view/completed/exam`, requestOptions)
+          fetch(`${backendURL}/view/completed/exam`, requestOptions)
             .then(response => response.json())
             .then(result => {
               if(result.status == "1"){

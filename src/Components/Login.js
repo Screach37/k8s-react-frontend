@@ -6,7 +6,7 @@ import { AiFillEye } from 'react-icons/ai';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
-import { API_URL } from '../env';
+import { backendURL } from '../env';
 
 
 export default function Login() {
@@ -50,7 +50,7 @@ export default function Login() {
           redirect: 'follow'
         };
 
-        fetch(`${API_URL}/login`, requestOptions)
+        fetch(`${backendURL}/login`, requestOptions)
           .then(response => response.json())
           .then(result => {
             if(result.status == "1"){
@@ -72,7 +72,7 @@ export default function Login() {
         redirect: 'follow'
       };
       
-      fetch(`${API_URL}/get/logo`, requestOptions)
+      fetch(`${backendURL}/get/logo`, requestOptions)
         .then(response => response.json())
         .then(result => {console.log(result);
         if(result.status==1){

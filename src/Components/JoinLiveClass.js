@@ -5,7 +5,7 @@ import { ImArrowLeft2 } from 'react-icons/im';
 import { AiTwotoneCalendar } from 'react-icons/ai';
 import { CiClock2 } from 'react-icons/ci';
 import { NavLink, useNavigate, useParams } from 'react-router-dom';
-import { API_URL } from '../env';
+import { backendURL } from '../env';
 
 export default function JoinLiveClass() {
 
@@ -41,7 +41,7 @@ export default function JoinLiveClass() {
           redirect: 'follow'
         };
 
-        fetch(`${API_URL}/getclass/byid`, requestOptions)
+        fetch(`${backendURL}/getclass/byid`, requestOptions)
           .then(response => response.json())
           .then(result => {
             if(result.status == "1"){

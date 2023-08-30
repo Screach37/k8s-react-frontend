@@ -7,7 +7,7 @@ import { IoMdCard } from 'react-icons/io';
 import { RxQuestionMarkCircled } from 'react-icons/rx';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import { API_URL } from '../env';
+import { backendURL } from '../env';
 
 export default function Header() {
 
@@ -30,7 +30,7 @@ export default function Header() {
       redirect: 'follow'
     };
     
-    fetch(`${API_URL}/get/studentdetail`, requestOptions)
+    fetch(`${backendURL}/get/studentdetail`, requestOptions)
       .then(response => response.json())
       .then(result => {
         if(result.status == "001")
@@ -47,7 +47,7 @@ export default function Header() {
       redirect: 'follow'
     };
     
-    fetch(`${API_URL}/get/logo`, requestOptions)
+    fetch(`${backendURL}/get/logo`, requestOptions)
       .then(response => response.json())
       .then(result => {console.log(result);
       if(result.status==1){

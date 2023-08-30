@@ -3,7 +3,7 @@ import { Fees } from "./SvgIcon";
 import { AiTwotoneCalendar } from "react-icons/ai";
 import { ImArrowLeft2 } from 'react-icons/im';
 import { NavLink, useNavigate, useParams } from 'react-router-dom';
-import { API_URL } from '../env';
+import { backendURL } from '../env';
 
 export default function PaymentDetail() {
 
@@ -29,7 +29,7 @@ export default function PaymentDetail() {
         redirect: 'follow'
       };
 
-      fetch(`${API_URL}/view/upcom/payments`, requestOptions)
+      fetch(`${backendURL}/view/upcom/payments`, requestOptions)
         .then(response => response.json())
         .then(result => {console.log(result);
           if(result.status==1){

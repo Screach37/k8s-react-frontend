@@ -11,7 +11,7 @@ import { FaPlay } from 'react-icons/fa';
 import { GiTrophyCup } from 'react-icons/gi';
 import Carousel from 'react-bootstrap/Carousel';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
-import { API_URL } from '../env';
+import { backendURL } from '../env';
 
 
 export default function Home() {
@@ -38,7 +38,7 @@ export default function Home() {
         redirect: 'follow'
       };
 
-      fetch(`${API_URL}/home`, requestOptions)
+      fetch(`${backendURL}/home`, requestOptions)
         .then(response => response.json())
         .then(result => {
           console.log(result);

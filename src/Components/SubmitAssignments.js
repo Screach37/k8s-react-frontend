@@ -7,7 +7,7 @@ import { AiTwotoneCalendar } from 'react-icons/ai';
 import { CiClock2 } from 'react-icons/ci';
 import { FiUpload } from 'react-icons/fi';
 import { NavLink, useNavigate, useParams } from 'react-router-dom';
-import { API_URL } from '../env';
+import { backendURL } from '../env';
 
 export default function SubmitAssignments() {
 
@@ -55,7 +55,7 @@ export default function SubmitAssignments() {
           redirect: 'follow'
         };
 
-        fetch(`${API_URL}/view/upcoming/assignments`, requestOptions)
+        fetch(`${backendURL}/view/upcoming/assignments`, requestOptions)
           .then(response => response.json())
           .then(result => {
             if(result.status == "1"){
@@ -91,7 +91,7 @@ export default function SubmitAssignments() {
           redirect: 'follow'
         };
         
-        fetch(`${API_URL}/submit/assignments`, requestOptions)
+        fetch(`${backendURL}/submit/assignments`, requestOptions)
           .then(response => response.json())
           .then(result => {
             if(result.status == "1"){

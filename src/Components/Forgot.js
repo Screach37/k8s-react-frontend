@@ -4,7 +4,7 @@ import { HiMail } from 'react-icons/hi';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
-import { API_URL } from '../env';
+import { backendURL } from '../env';
 
 export default function Forgot() {
 
@@ -27,7 +27,7 @@ export default function Forgot() {
         redirect: 'follow'
       };
   
-      fetch(`${API_URL}/forgetpass1`, requestOptions)
+      fetch(`${backendURL}/forgetpass1`, requestOptions)
         .then(response => response.json())
         .then(result => {
           if(result.status == true){

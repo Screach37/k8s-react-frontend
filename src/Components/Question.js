@@ -5,7 +5,7 @@ import { TbArrowNarrowLeft } from 'react-icons/tb';
 import { TbArrowNarrowRight } from 'react-icons/tb';
 import { NavLink, useParams } from 'react-router-dom';
 import { click } from '@testing-library/user-event/dist/click';
-import { API_URL } from '../env';
+import { backendURL } from '../env';
 
 export default function Question() {
 
@@ -36,7 +36,7 @@ export default function Question() {
           redirect: 'follow'
         };
 
-        fetch(`${API_URL}/join/upcoming/quiz`, requestOptions)
+        fetch(`${backendURL}/join/upcoming/quiz`, requestOptions)
           .then(response => response.json())
           .then(result => {
             if(result.status == "1"){

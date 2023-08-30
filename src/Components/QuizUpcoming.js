@@ -7,7 +7,7 @@ import { MdOutlineAssignment } from 'react-icons/md';
 import { MdOutlineMenuBook } from 'react-icons/md';
 import { GiTrophyCup } from 'react-icons/gi';
 import { NavLink, useLocation } from 'react-router-dom';
-import { API_URL } from '../env';
+import { backendURL } from '../env';
 
 export default function QuizUpcoming() {
 
@@ -25,7 +25,7 @@ export default function QuizUpcoming() {
           redirect: 'follow'
         };
 
-        fetch(`${API_URL}/get/upcoming/quiz`, requestOptions)
+        fetch(`${backendURL}/get/upcoming/quiz`, requestOptions)
           .then(response => response.json())
           .then(result => {
             if(result.status == "1"){

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { API_URL } from '../env';
+import { backendURL } from '../env';
 
 export default function EnrollPreRecord() {
 
@@ -16,7 +16,7 @@ export default function EnrollPreRecord() {
           redirect: 'follow'
         };
 
-        fetch(`${API_URL}/get/enroll/prereccou`, requestOptions)
+        fetch(`${backendURL}/get/enroll/prereccou`, requestOptions)
           .then(response => response.json())
           .then(result => {
             if(result.status == "1"){

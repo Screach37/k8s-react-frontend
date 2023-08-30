@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { NavLink } from 'react-router-dom';
-import { API_URL } from '../env';
+import { backendURL } from '../env';
 
 export default function Performance() {
 
@@ -33,7 +33,7 @@ export default function Performance() {
           redirect: 'follow'
         };
 
-      fetch(`${API_URL}/myperformance`, requestOptions)
+      fetch(`${backendURL}/myperformance`, requestOptions)
         .then(response => response.json())
         .then(result => {
           if(result.status == "1"){
@@ -65,7 +65,7 @@ export default function Performance() {
             redirect: 'follow'
           };
 
-          fetch(`${API_URL}/get/class/statics`, requestOptions)
+          fetch(`${backendURL}/get/class/statics`, requestOptions)
             .then(response => response.json())
             .then(result => {
               if(result.status == "1");
@@ -91,7 +91,7 @@ export default function Performance() {
           redirect: 'follow'
         };
 
-        fetch(`${API_URL}/get/quiz/statics`, requestOptions)
+        fetch(`${backendURL}/get/quiz/statics`, requestOptions)
           .then(response => response.json())
           .then(result => {
             if(result.status == "1"){
@@ -118,7 +118,7 @@ export default function Performance() {
           redirect: 'follow'
         };
 
-        fetch(`${API_URL}/get/exam/statics`, requestOptions)
+        fetch(`${backendURL}/get/exam/statics`, requestOptions)
           .then(response => response.json())
           .then(result => {
             if(result.status == "1"){
@@ -145,7 +145,7 @@ export default function Performance() {
           redirect: 'follow'
         };
 
-        fetch(`${API_URL}/get/assignment/statics`, requestOptions)
+        fetch(`${backendURL}/get/assignment/statics`, requestOptions)
           .then(response => response.json())
           .then(result => {
             if(result.status == "1"){
@@ -172,7 +172,7 @@ export default function Performance() {
           redirect: 'follow'
         };
 
-        fetch(`${API_URL}/get/physical/class/statics`, requestOptions)
+        fetch(`${backendURL}/get/physical/class/statics`, requestOptions)
           .then(response => response.json())
           .then(result => {
             if(result.status == "1"){

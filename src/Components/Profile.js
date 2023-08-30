@@ -3,7 +3,7 @@ import Performance from './Performance';
 import OtherDetail from './OtherDetail';
 import Footer from './Footer';
 import { useNavigate } from 'react-router-dom';
-import { API_URL } from '../env';
+import { backendURL } from '../env';
 
 export default function Profile() {
 
@@ -24,7 +24,7 @@ export default function Profile() {
         redirect: 'follow'
       };
       
-      fetch(`${API_URL}/get/studentdetail`, requestOptions)
+      fetch(`${backendURL}/get/studentdetail`, requestOptions)
         .then(response => response.json())
         .then(result => {
           if(result.status == "001")

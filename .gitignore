@@ -2,4 +2,4 @@
 scripts/after_install.sh-backup-ss
 scripts/before_install.sh-backup-ssm
 scripts/app_start.sh-backup-ssm
-
+node_modules

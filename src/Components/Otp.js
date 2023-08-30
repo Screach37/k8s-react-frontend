@@ -3,7 +3,7 @@ import Logo from '../images/logo.png';
 import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
-import { API_URL } from '../env';
+import { backendURL } from '../env';
 
 export default function Otp() {
   
@@ -52,7 +52,7 @@ export default function Otp() {
             redirect: 'follow'
           };
 
-          fetch(`${API_URL}/forgetpass2`, requestOptions)
+          fetch(`${backendURL}/forgetpass2`, requestOptions)
             .then(response => response.json())
             .then(result => {
               console.log(result);
@@ -82,7 +82,7 @@ export default function Otp() {
             redirect: 'follow'
           };
       
-          fetch(`${API_URL}/forgetpass1`, requestOptions)
+          fetch(`${backendURL}/forgetpass1`, requestOptions)
             .then(response => response.json())
             .then(result => {
               if(result.status == true){

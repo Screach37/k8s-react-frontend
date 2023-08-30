@@ -3,7 +3,7 @@ import { Fees } from "./SvgIcon";
 import { AiTwotoneCalendar } from "react-icons/ai";
 import { FiDownload } from "react-icons/fi";
 import { NavLink } from 'react-router-dom';
-import { API_URL } from '../env';
+import { backendURL } from '../env';
 
 export default function PaymentHistory() {
 
@@ -20,7 +20,7 @@ export default function PaymentHistory() {
       redirect: 'follow'
     };
 
-    fetch(`${API_URL}/get/completed/payments`, requestOptions)
+    fetch(`${backendURL}/get/completed/payments`, requestOptions)
       .then(response => response.json())
       .then(result => {console.log(result);
         if(result.status==1){

@@ -6,7 +6,7 @@ import { MdChevronRight } from 'react-icons/md';
 import { MdOutlineQuiz } from 'react-icons/md';
 import { MdOutlineAssignment } from 'react-icons/md';
 import { NavLink, useLocation } from 'react-router-dom';
-import { API_URL } from '../env';
+import { backendURL } from '../env';
 
 export default function Upcoming() {
 
@@ -24,7 +24,7 @@ export default function Upcoming() {
           redirect: 'follow'
         };
 
-        fetch(`${API_URL}/get/upcoming/classes`, requestOptions)
+        fetch(`${backendURL}/get/upcoming/classes`, requestOptions)
           .then(response => response.json())
           .then(result => {
             if(result.status =="1"){

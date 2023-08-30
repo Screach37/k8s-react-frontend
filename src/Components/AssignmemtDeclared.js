@@ -7,7 +7,7 @@ import { AiTwotoneCalendar } from 'react-icons/ai';
 import { CiClock2 } from 'react-icons/ci';
 import { FiUpload } from 'react-icons/fi';
 import { NavLink, useNavigate, useParams } from 'react-router-dom';
-import { API_URL } from '../env';
+import { backendURL } from '../env';
 
 export default function AssignmemtDeclared() {
 
@@ -48,7 +48,7 @@ export default function AssignmemtDeclared() {
           redirect: 'follow'
         };
 
-        fetch(`${API_URL}/view/completed/assignments/undec`, requestOptions)
+        fetch(`${backendURL}/view/completed/assignments/undec`, requestOptions)
           .then(response => response.json())
           .then(result => {
             if(result.status == "1"){

@@ -3,7 +3,7 @@ import { AiTwotoneCalendar } from 'react-icons/ai';
 import { CiClock2 } from 'react-icons/ci';
 import { MdChevronRight } from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
-import { API_URL } from '../env';
+import { backendURL } from '../env';
 
 export default function ExamHIstory() {
 
@@ -19,7 +19,7 @@ export default function ExamHIstory() {
           redirect: 'follow'
         };
 
-        fetch(`${API_URL}/get/completed/exam`, requestOptions)
+        fetch(`${backendURL}/get/completed/exam`, requestOptions)
           .then(response => response.json())
           .then(result => {
             if(result.status == "1"){

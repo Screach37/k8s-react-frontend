@@ -3,7 +3,7 @@ import { FiHome } from 'react-icons/fi';
 import { MdOutlineMenuBook } from 'react-icons/md';
 import { IoMdCard } from 'react-icons/io';
 import { NavLink, useLocation } from 'react-router-dom';
-import { API_URL } from '../env';
+import { backendURL } from '../env';
 
 export default function Footer() {
   
@@ -22,7 +22,7 @@ export default function Footer() {
       redirect: 'follow'
     };
     
-    fetch(`${API_URL}/get/studentdetail`, requestOptions)
+    fetch(`${backendURL}/get/studentdetail`, requestOptions)
       .then(response => response.json())
       .then(result => {
         if(result.status == "001")

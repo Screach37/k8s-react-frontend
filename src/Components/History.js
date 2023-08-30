@@ -6,7 +6,7 @@ import { MdChevronRight } from 'react-icons/md';
 import { MdOutlineQuiz } from 'react-icons/md';
 import { MdOutlineAssignment } from 'react-icons/md';
 import { NavLink, useLocation } from 'react-router-dom';
-import { API_URL } from '../env';
+import { backendURL } from '../env';
 
 export default function History() {
 
@@ -23,7 +23,7 @@ export default function History() {
           redirect: 'follow'
         };
 
-        fetch(`${API_URL}/get/completed/classes`, requestOptions)
+        fetch(`${backendURL}/get/completed/classes`, requestOptions)
           .then(response => response.json())
           .then(result => {
             if(result.status == "1"){

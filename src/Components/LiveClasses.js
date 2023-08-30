@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Cardimg from '../images/cardimg.png';
 import { GiDuration } from 'react-icons/gi';
 import { NavLink } from 'react-router-dom';
-import { API_URL } from '../env';
+import { backendURL } from '../env';
 
 export default function LiveClasses() {
 
@@ -18,7 +18,7 @@ export default function LiveClasses() {
           redirect: 'follow'
         };
 
-        fetch(`${API_URL}/get/cou`, requestOptions)
+        fetch(`${backendURL}/get/cou`, requestOptions)
           .then(response => response.json())
           .then(result => {
             if(result.status == "1"){

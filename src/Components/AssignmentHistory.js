@@ -4,7 +4,7 @@ import { CiClock2 } from 'react-icons/ci';
 import { SiGoogleclassroom } from 'react-icons/si';
 import { MdOutlineAssignment, MdOutlineMenuBook, MdOutlineScoreboard, MdOutlineQuiz } from 'react-icons/md';
 import { NavLink, useLocation } from 'react-router-dom';
-import { API_URL } from '../env';
+import { backendURL } from '../env';
 
 export default function AssignmentHistory() {
 
@@ -21,7 +21,7 @@ export default function AssignmentHistory() {
           redirect: 'follow'
         };
 
-        fetch(`${API_URL}/get/completed/assignments`, requestOptions)
+        fetch(`${backendURL}/get/completed/assignments`, requestOptions)
           .then(response => response.json())
           .then(result => {
             if(result.status == "1"){

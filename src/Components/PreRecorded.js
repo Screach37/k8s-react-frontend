@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { GiDuration } from 'react-icons/gi';
 import { NavLink } from 'react-router-dom';
-import { API_URL } from '../env';
+import { backendURL } from '../env';
 
 export default function PreRecorded() {
 
@@ -17,7 +17,7 @@ export default function PreRecorded() {
           redirect: 'follow'
         };
 
-        fetch(`${API_URL}/get/prereccou`, requestOptions)
+        fetch(`${backendURL}/get/prereccou`, requestOptions)
           .then(response => response.json())
           .then(result => {
             if(result.status == "1"){
